@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId> <!-- Cambia 'com.example' por tu propio grupo si lo deseas -->
+    <artifactId>gestor-tareas</artifactId> <!-- Nombre del proyecto -->
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- Configuración de compilación -->
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>  <!-- Versión de Java (puedes usar 11 o 17 según tu instalación) -->
+        <maven.compiler.target>17</maven.compiler.target>  <!-- Versión de Java -->
+    </properties>
+
+    <!-- Dependencias necesarias -->
+    <dependencies>
+
+        <!-- Spark Framework para manejar las rutas HTTP -->
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>2.9.3</version>
+        </dependency>
+
+        <!-- Gson para la conversión de objetos Java a JSON y viceversa -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.8</version>
+        </dependency>
+
+        <!-- SLF4J API para manejo de logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+        </dependency>
+
+        <!-- Logback como implementación de SLF4J -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+    </dependencies>
+
+    <!-- Plugins para gestionar la compilación y ejecución -->
+    <build>
+        <plugins>
+
+            <!-- Plugin para manejar la compilación del proyecto en Java -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin para ejecutar la clase principal sin tener que empaquetar el proyecto -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <mainClass>com.example.Main</mainClass> <!-- Asegúrate de que el paquete y la clase principal sean correctos -->
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

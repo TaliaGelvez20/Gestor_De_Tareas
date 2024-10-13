@@ -1,0 +1,153 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #666;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.container-input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.container-input input {
+    width: 100%;
+}
+
+.container-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"], select {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #6c63ff;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6c63ff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5753d7;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+}
+
+li.pendiente {
+    background-color: #ffeeba;
+}
+
+li.en_proceso {
+    background-color: #bee5eb;
+}
+
+li.finalizada {
+    background-color: #c3e6cb;
+    text-decoration: line-through;
+}
+
+button.eliminar {
+    background-color: #dc3545;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.eliminar:hover {
+    background-color: #c82333;
+}
+
+button.editar {
+    background-color: #28a745;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.editar:hover {
+    background-color: #218838;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+button i {
+    margin-right: 5px;
+}
+
+.container-form select {
+    width: 70%;
+}

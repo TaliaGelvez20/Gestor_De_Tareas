@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas - LocalStorage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Gestor de Tareas <i class="fas fa-tasks"></i></h1>
+
+    <!-- Formulario para agregar tareas -->
+    <div class="form-group">
+        <div class="container-input">
+            <input type="text" id="nueva-tarea" placeholder="Agregar una nueva tarea">
+        </div>
+        <div class="container-form">
+            <select id="estado-tarea">
+                <option value="pendiente">Pendiente</option>
+                <option value="en_proceso">En Proceso</option>
+                <option value="finalizada">Finalizada</option>
+            </select>
+            <button id="agregar-btn"><i class="fas fa-plus-circle"></i> Agregar</button>
+        </div>
+    </div>
+
+    <!-- Lista de tareas -->
+    <h2>Tareas <i class="fas fa-list-ul"></i></h2>
+    <ul id="lista-tareas"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
